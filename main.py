@@ -13,16 +13,19 @@ a = "It Works!"
 def home():
     return render_template('home.html', a=a)
 
+#This is the app route for the login page
 @app.route("/login")
 def login():
     return render_template('login.html', a=a)
 
+#This is the app route for the individual account
 @app.route("/individual")
-def login():
+def individual():
     return render_template('individual.html', a=a)
 
+#This is the app route for the business account
 @app.route("/business")
-def login():
+def business():
     return render_template('business.html', a=a)
 
 @app.route("/about")

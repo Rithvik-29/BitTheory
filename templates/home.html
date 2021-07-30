@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="static/home.css">
+    <script type="text/javascript" src="dynamic/login.js"></script>
 </head>
 
 <body>
@@ -16,8 +17,10 @@
 	
 	<ul id="navbar">
 		<li><a class="active" href="">Home</a></li>
-		<li><a href="">Login</a></li>
-		<li class="dropdown">
+        <li>
+		    <a><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></a>
+		</li>
+        <li class="dropdown">
 			<a class="dropbtn" href="javascript:void(0)">News</a>
 			<div class="dropdown-content">
 				<a href="#">News 1</a>
@@ -28,8 +31,29 @@
 		<li><a href="">About</a></li>
 	</ul>
 	
-<script>
-</script>
+    <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+
+        <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+            
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+    </div>
 
 </body>
 
