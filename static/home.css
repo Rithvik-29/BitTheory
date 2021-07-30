@@ -1,16 +1,11 @@
 body {
-	font-family: 		arial;
+    font-family: 		arial;
+    background-color: teal;
 }
 
 .topbar {
 	height:			80px;
-	background: 	linear-gradient(to bottom right, rgb(200, 200, 200), rgb(100, 100, 100));
-}
-
-.logo {
-	width:	80px;
-	height:	80px;
-	float:	left;
+	background: 	linear-gradient(to bottom right, lightblue, rgb(33, 48, 128));
 }
 
 .topphrase {
@@ -43,7 +38,8 @@ li a, .dropbtn {
     text-align:			center;
     padding:			14px 16px;
     text-decoration:	none;
-	width:				80px;
+    width:				80px;
+    background-color: silver;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
