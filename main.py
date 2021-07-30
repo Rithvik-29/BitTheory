@@ -10,6 +10,22 @@ a = "It Works!"
 def home():
     return render_template('home.html', a=a)
 
+@app.route("/login")
+def login():
+    return render_template('login.html', a=a)
+
+@app.route("/individual")
+def login():
+    return render_template('individual.html', a=a)
+
+@app.route("/business")
+def login():
+    return render_template('business.html', a=a)
+
+@app.route("/about")
+def about():
+    return render_template('home.html', a=a)
+
 #This part runs the server
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
