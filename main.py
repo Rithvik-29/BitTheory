@@ -2,6 +2,9 @@
 from flask import Flask,render_template
 app = Flask(__name__)
 
+#address
+address = "27 Punggol Field Walk, Singapore 828649"
+
 #This variable is displayed on the homepage
 a = "It Works!"
 
