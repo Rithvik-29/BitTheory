@@ -1,6 +1,10 @@
 #This part initialises flask
 from flask import Flask,render_template
 app = Flask(__name__)
+isLockdown = {
+    'Singapore':True,
+    'India':False
+}
 
 #address
 address = "27 Punggol Field Walk, Singapore 828649"
@@ -21,12 +25,12 @@ def login():
 #This is the app route for the individual account
 @app.route("/individual")
 def individual():
-    return render_template('individual.html', a=a)
+    return render_template('individual.html', isLockdown=isLockdown)
 
 #This is the app route for the business account
 @app.route("/business")
 def business():
-    return render_template('business.html', a=a)
+    return render_template('business.html')
 
 @app.route("/about")
 def about():
