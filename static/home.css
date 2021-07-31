@@ -178,3 +178,10 @@ select,input{
     width: 100%;
     font-size:12pt;
 }
+h1,h2{
+    color: rgb(15, 33, 90);
+    text-align: center;
+}
+iframe{
+    display:block;
+}

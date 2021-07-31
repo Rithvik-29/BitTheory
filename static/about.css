@@ -1,0 +1,48 @@
+h1 {
+  color:#9999;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing:  8px;
+  margin-bottom:  2rem;
+
+}
+
+h2 {
+  color:#777;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 2rem;
+  color:#fff;
+  line-height:5rem;
+  margin-bottom: 5rem;
+
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }

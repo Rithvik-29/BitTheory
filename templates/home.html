@@ -25,10 +25,10 @@
             <li><a href="/about">About</a></li>
         </ul>
         <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" action="/action">
             <div class="container">
             <label for="name"><b>Name</b></label>
-            <input type="name" text size="50" placeholder="Enter Name" name="name" required>
+            <input type="name" id="name" text size="50" placeholder="Enter Name" name="name" required>
             <br>
             <br>
             <label for="country">Choose Your Country:</label>
@@ -43,14 +43,14 @@
             </select>
             <br>
             <br>
-            <label for="type">Are you a business or an individual?</label>
-            <select name="type" id="type">
+            <label for="userType">Are you a business or an individual?</label>
+            <select name="userType" id="userType">
                 <option value="individual">Individual</option>
                 <option value="business">Business</option>
             </select>
             <br>
             <br>
-            <button type="submit">Login</button>
+            <a href="/action"><button type="submit">Login</button></a>
             </div>
             <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -58,6 +58,9 @@
         </form>
         </div>
         <h1>Latest Covid Measures</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QYN3aEu8a0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p align="center"><iframe width="840" height="472" src="https://www.youtube.com/embed/QYN3aEu8a0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        <h1>Frequently Asked COVID-19 related questions</h1>
+        <h2>Answered by CDC</h2>
+        <p align="center"><iframe width="840" height="472" src="https://www.cdc.gov/coronavirus/2019-ncov/faq.html"></iframe></p>
     </body>
 </html>

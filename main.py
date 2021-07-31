@@ -1,5 +1,5 @@
 #This part initialises flask
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 app = Flask(__name__)
 isLockdown = {
     'Singapore':True,
@@ -30,11 +30,20 @@ def individual():
 #This is the app route for the business account
 @app.route("/business")
 def business():
-    return render_template('business.html')
+    return render_template('business.html',name=name)
 
 @app.route("/about")
 def about():
     return render_template('about.html', a=a)
+
+@app.route("/action")
+def action():
+    if request.args.get('userType') == 'individual':
+        return render_template('/individual.html',userType=request.args.get('userType'),isLockdown=isLockdown,name=request.args.get('name'),country=request.args.get('country'))
+    elif request.args.get('userType') == 'business':
+        return render_template('/business.html',name=request.args.get('name'),country=request.args.get('country'),userType=request.args.get('userType'))
+    else:
+        return render_template('/individual.html',userType=request.args.get('userType'),isLockdown=isLockdown,name=request.args.get('name'),country=request.args.get('country'))
 
 #This part runs the server
 if __name__ == "__main__":
