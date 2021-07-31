@@ -176,4 +176,12 @@ button {
 }
 ul.list {
   list-style-type: circle;
+  margin-left: 20px;
+  font-size: 14px;
+}
+li {
+  display: list-item
+}
+ul.list li{
+  padding: 5px 5px;
 }
