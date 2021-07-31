@@ -30,7 +30,7 @@ def business():
 
 @app.route("/about")
 def about():
-    return render_template('home.html', a=a)
+    return render_template('about.html', a=a)
 
 #This part runs the server
 if __name__ == "__main__":
