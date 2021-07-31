@@ -30,11 +30,15 @@ def individual():
 #This is the app route for the business account
 @app.route("/business")
 def business():
-    return render_template('business.html',name=name)
+    return render_template('business.html',name=request.args.get('name'))
 
 @app.route("/about")
 def about():
     return render_template('about.html', a=a)
+
+@app.route("/floaty")
+def game():
+    return render_template('floaty.html')
 
 @app.route("/action")
 def action():
