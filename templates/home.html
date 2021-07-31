@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
-	<title>Site title</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="static/home.css">
-    <script type="text/javascript" src="dynamic/login.js"></script>
-</head>
-
-<body>
-
-	<div class="topbar">
-		<div class="topphrase">Bit Theory</div>
-	</div>
-	
-	<ul id="navbar">
-		<li><a class="active" href="">Home</a></li>
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;height:auto">Login</button>
-        <li class="dropdown">
-			<a class="dropbtn" href="javascript:void(0)">News</a>
-			<div class="dropdown-content">
-				<a href="#">News 1</a>
-				<a href="#">News 2</a>
-				<a href="#">News 3</a>
-			</div>
-		</li>
-		<li><a href="/about">About</a></li>
-	</ul>
-	
-    <div id="id01" class="modal">
-    
-    <form class="modal-content animate" action="/action_page.php" method="post">
-
-        <div class="container">
-        <label for="uname"><b>Name</b></label>
-        <input type="text" placeholder="Enter Name" name="uname" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+    <head>
+        <title>Site title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/home.css">
+        <script type="text/javascript" src="dynamic/login.js"></script>
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topphrase">Bit Theory</div>
         </div>
+        <ul id="navbar">
+            <li><a class="active" href="">Home</a></li>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;height:auto">Login</button>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">News</a>
+                <div class="dropdown-content">
+                    <a href="#">News 1</a>
+                    <a href="#">News 2</a>
+                    <a href="#">News 3</a>
+                </div>
+            </li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input type="name" text size="50" placeholder="Enter Name" name="name" required>
+            <br>
+            <label for="country">Choose Your Country:</label>
+            <select name="country" id="country">
+                <option value="none">Choose a Country</option>
+                <option value="singapore">Singapore</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="malaysia">Malaysia</option>
+            </select>
+            <br>
+            <label for="type">Are you a business or an individual?</label>
+            <select name="type" id="type">
+                <option value="individual">Individual</option>
+                <option value="business">Business</option>
+            </select>
+            <button type="submit">Login</button>
+            </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw"><a href="#">Forgot password?</a></span>
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
         </div>
-    </form>
-    </div>
-
-</body>
-
+    </body>
 </html>
