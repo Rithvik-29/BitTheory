@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="home.css">
-</head>
-<body>
-This is the Home Page.
-
-{% for item in isLockdown %}
-    {{item}}
-    {{isLockdown[item]}}
-{% endfor %}
-
-</body>
+<html lang="en-US">
+    <head>
+        <title>Site title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/individual.css">
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topphrase">Bit Theory</div>
+        </div>
+        <ul id="navbar">
+            <li><a class="active" href="">Home</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="javascript:void(0)">News</a>
+                <div class="dropdown-content">
+                    <a href="#">News 1</a>
+                    <a href="#">News 2</a>
+                    <a href="#">News 3</a>
+                </div>
+            </li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <br>
+        <br>
+        <h2>Hello {{name}}!</h2>
+    </body>
 </html>
