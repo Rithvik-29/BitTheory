@@ -16,8 +16,7 @@
                 <a class="dropbtn" href="javascript:void(0)">Games</a>
                 <div class="dropdown-content">
                     <a href="/floaty">Floaty Block</a>
-                    <a href="#">News 2</a>
-                    <a href="#">News 3</a>
+                    <a href="/snake">Snakes & Apples</a>
                 </div>
             </li>
             <li><a href="/about">About</a></li>
@@ -25,5 +24,16 @@
         <br>
         <br>
         <h2>Hello {{name}}!</h2>
+        {% for place in isLockdown %}
+        {% if country == place %}
+        {% if isLockdown[place] == True %}
+        <h3>Your Country is Currently under lockdown!</h3>
+        <h4>It is essential for you to stay home and help prevent the spread of COVID-19 unless there is an emergency. This will not only help you stay safe but will also protect those around you, including family and friends.</h4>
+        <p align="center"><iframe width="840" height="472" src="https://www.straitstimes.com/singapore/health/spore-returns-to-phase-2-what-you-need-to-know-about-tightened-covid-19-rules-from"></iframe></p>
+        {% else %}
+        <h4>You are allowed to do as you please. However, it is strongly recommended that you still remain at home as much as possible to help curb the spread of COVID-19.</h4>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
     </body>
 </html>

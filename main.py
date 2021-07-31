@@ -2,8 +2,12 @@
 from flask import Flask,render_template, request
 app = Flask(__name__)
 isLockdown = {
-    'Singapore':True,
-    'India':False
+    'singapore':False,
+    'india':False,
+    'australia':False,
+    'usa':True,
+    'uk':False,
+    'malaysia':True,
 }
 
 #address
@@ -37,8 +41,12 @@ def about():
     return render_template('about.html', a=a)
 
 @app.route("/floaty")
-def game():
+def floaty():
     return render_template('floaty.html')
+
+@app.route("/snake")
+def snake():
+    return render_template('snake.html')
 
 @app.route("/action")
 def action():

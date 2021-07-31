@@ -1,40 +1,49 @@
-div h1 {
-  color:#9999;
-  font-size: 5rem;
-  font-weight: 700;
-  letter-spacing:  8px;
-  margin-bottom:  2rem;
-
-}
-
-div h2 {
-  color:#777;
-  font-size: 4rem;
-  font-weight: 400;
-}
-
-p {
-  font-size: 2rem;
-  color:#fff;
-  line-height:5rem;
-  margin-bottom: 5rem;
-
-}
-* {
-    box-sizing: border-box;
-}
+:root {
+    --shadow-color: #FF9E9E;
+    --shadow-color-light: white;
+  }
   
-.content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-}
-body {
-    background-image: url('static/assets/Walkability-article-800x450.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Archivo", sans-serif;
+    background-color: #192824;
+  }
+  
+  p {
+    margin: calc(50vh - 4px) auto 0 auto;
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+  
+  .logo-1 {
+    color: white;
+    animation: neon 3s infinite;
+  }
+  
+  @keyframes neon {
+    0% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 2px var(--shadow-color-light),
+      0 0 3px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 5px var(--shadow-color), 0 0 7px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
+    }
+    50% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 5px var(--shadow-color-light), 0 0 1.5px var(--shadow-color-light), 0 0 2.5px var(--shadow-color-light),
+      0 0 4px var(--shadow-color), 0 0 5px var(--shadow-color), 0 0 6px var(--shadow-color), 0 0 8px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 21px var(--shadow-color);
+    }
+    100% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 1px var(--shadow-color-light), 0 0 2px var(--shadow-color-light),
+      0 0 3px var(--shadow-color), 0 0 4px var(--shadow-color), 0 0 5px var(--shadow-color), 0 0 7px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
+    }
   }
